@@ -41,3 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: MaskKnobSpot
+    uniqueID: 548354537
+    locked: 0
