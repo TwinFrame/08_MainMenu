@@ -1306,6 +1306,10 @@ PrefabInstance:
       propertyPath: _id
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7535309113001696138, guid: 60843d384fba97145a890c63ccc43757, type: 3}
+      propertyPath: _name
+      value: "\u0418\u0433\u0440\u0430\u0442\u044C"
+      objectReference: {fileID: 0}
     - target: {fileID: 7535309113001696151, guid: 60843d384fba97145a890c63ccc43757, type: 3}
       propertyPath: m_RootOrder
       value: 1
