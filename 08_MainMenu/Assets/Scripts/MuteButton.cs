@@ -17,8 +17,6 @@ public class MuteButton : MonoBehaviour
 	private void Awake()
 	{
 		_image = GetComponent<Image>();
-
-		isEnable = true;
 	}
 
 	public void SetSprite(bool isEnable)

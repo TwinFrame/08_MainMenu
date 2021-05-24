@@ -17,6 +17,7 @@ public class KnobSpot : MonoBehaviour
 	{
 		_currentPositionY = transform.position.y;
 	}
+
 	public void MoveOnY(float positionY)
 	{
 		transform.DOMoveY(positionY, 0.2f).SetEase(Ease.InOutElastic);

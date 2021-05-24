@@ -31,8 +31,6 @@ public class ClickingOnMainButtons : MonoBehaviour, IPointerDownHandler, IPointe
 			_currentMainButtonOnDown = mainButton;
 
 			_currentMainButtonOnDown.ChangeTexture(_onDown);
-
-			return;
 		}
 	}
 
