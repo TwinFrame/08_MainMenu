@@ -8,16 +8,22 @@ using System.IO;
 
 public class PublishDescriptionText : MonoBehaviour
 {
+	[SerializeField] private float _timeFadeText;
 	private Text _text;
 	private string _commonPath = "Assets/DescriptionText/Text";
 	private string _path;
 	private string _currentLine = "";
 	private string _currentText;
+
+	private Color _currentColor;
+
 	private Coroutine _changeTextJob;
 
 	private void Awake()
 	{
 		_text = GetComponentInChildren<Text>();
+
+		_currentColor = _text.color;
 	}
 
 	public void PublishTextAsButtonID(int id)
@@ -32,7 +38,7 @@ public class PublishDescriptionText : MonoBehaviour
 			StopCoroutine(_changeTextJob);
 		}
 
-		_changeTextJob = StartCoroutine(ChangeText(0.5f, text));
+		_changeTextJob = StartCoroutine(ChangeText(_timeFadeText, text));
 	}
 
 	private string LoadTextFromFile(int id)
@@ -58,14 +64,13 @@ public class PublishDescriptionText : MonoBehaviour
 
 	private IEnumerator ChangeText(float duration, string text)
 	{
-		Color color;
 		float currentTime = 0;
 
 		while (currentTime <= duration)
 		{
-			color.a = 1 - currentTime / duration;
+			_currentColor.a = 1 - currentTime / duration;
 
-			_text.color = new Color(_text.color.r, _text.color.g, _text.color.b, color.a);
+			_text.color = _currentColor;
 
 			currentTime += Time.deltaTime;
 
@@ -78,9 +83,9 @@ public class PublishDescriptionText : MonoBehaviour
 
 		while (currentTime <= duration)
 		{
-			color.a = currentTime / duration;
+			_currentColor.a = currentTime / duration;
 
-			_text.color = new Color(_text.color.r, _text.color.g, _text.color.b, color.a);
+			_text.color = _currentColor;
 
 			currentTime += Time.deltaTime;
 

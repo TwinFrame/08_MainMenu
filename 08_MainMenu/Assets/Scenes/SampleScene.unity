@@ -1900,6 +1900,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1763222388}
     m_Modifications:
+    - target: {fileID: 1374704312105976513, guid: 388eb9c6cd1080e45bc5ae1cd30d349b, type: 3}
+      propertyPath: _timeFadeText
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6229440139769322965, guid: 388eb9c6cd1080e45bc5ae1cd30d349b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
